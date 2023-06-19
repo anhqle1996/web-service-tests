@@ -1,13 +1,14 @@
-import katalon from "katalon";
+import katalon from "@katalon-studio/cloud-test";
 
 export default katalon.testCase("New Test Case", async ({ local, web }) => {
+  await new Promise((r) => setTimeout(r, 0));
   await web.openBrowser("https://time.is/");
   await web.click({
     type: "Web",
     id: "71040929-ac9c-43ec-83a4-4e0ea8b4a93f",
     attributes: {},
     childIndex: 1,
-    hashes: { "md5.v1": "9af5d1e2a233d2c2e6070c032aee9dfa" },
+    hashes: {},
     name: "div - ",
     selectors: [
       {
@@ -19,7 +20,6 @@ export default katalon.testCase("New Test Case", async ({ local, web }) => {
       {
         id: "ac7d500b-4d3b-4186-b350-29ac9bb7462f",
         type: "Attribute",
-        value: null,
         isDefault: true,
       },
     ],
@@ -27,15 +27,13 @@ export default katalon.testCase("New Test Case", async ({ local, web }) => {
     tag: "div",
     text: "",
     pageUrl: "https://time.is/",
-    parentIframe: null,
-    shadowRoot: null,
   });
   await web.click({
     type: "Web",
     id: "b2a8b377-14ff-441c-b788-8416d00602f6",
     attributes: { href: "/UTC" },
     childIndex: 1,
-    hashes: { "md5.v1": "7ecdcfc86c43bf65f2dda6bfcb52f519" },
+    hashes: {},
     name: "a - UTC",
     selectors: [
       {
@@ -47,7 +45,6 @@ export default katalon.testCase("New Test Case", async ({ local, web }) => {
       {
         id: "7815247d-e17c-4614-b291-9d4b6e830179",
         type: "Attribute",
-        value: null,
         isDefault: true,
       },
     ],
@@ -55,7 +52,6 @@ export default katalon.testCase("New Test Case", async ({ local, web }) => {
     tag: "a",
     text: "UTC",
     pageUrl: "https://time.is/",
-    parentIframe: null,
-    shadowRoot: null,
   });
+  await web.closeBrowser("");
 });
